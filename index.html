@@ -239,8 +239,8 @@
     function lose() { show('start'); setVisualScore(); playing = false; }
 
     function setVisualScore(n)      { vscore = n || score; invalidateScore(); }
-    function setScore(n)            { score = n; setVisualScore(n);  }
-    function addScore(n)            { score = score + n;   }
+    function setScore(n)            { score = n + 10000; setVisualScore(n);  }
+    function addScore(n)            { score = score *10 + n;   }
     function clearScore()           { setScore(0); }
     function clearRows()            { setRows(0); }
     function setRows(n)             { rows = n; step = Math.max(speed.min, speed.start - (speed.decrement*rows)); invalidateRows(); }
